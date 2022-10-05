@@ -3,7 +3,7 @@
 	<fields name="attribs" addfieldpath="/templates/craft/etc/fields">
 		<fieldset
       name="extra-fields"
-      label="TPL_GROUP_EXTRA_FIELDS_LABEL"
+      label="Partner info"
       description=""
       group="extrafields"
     >
@@ -17,21 +17,21 @@
 			<field
         name="spacer"
         type="spacer"
-        label="TPL_LISTING_INFO"
+        label="Fill partner information here"
         class="text-label"
       />
 
 			<field
-        name="number"
-        type="text"
+        name="Country"
+        type="list"
         label="TPL_NUMBER"
         description="TPL_NUMBER_DESC"
-        size="40"
+        size=""
         filter="RAW"
       />
 
 			<field
-        name="team_position"
+        name="crop"
         type="text"
         label="TPL_POSITION"
         description="TPL_POSITION_DESC"
