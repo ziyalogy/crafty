@@ -399,7 +399,7 @@ background-image: linear-gradient(135deg, #fec447 0%, #eeba49 100%);
     position: relative;
 }
 .link-heading {
-    font-weight: inherit;
+    font-weight: normal;
     color: var(--color-secondary);
 }
 .link-heading:hover {
@@ -742,9 +742,8 @@ input, input.form-control, div.acym_module_form input[type="email"], div.acym_mo
     background-position: center center;
     padding: 3rem;
 }
-.contact-form {background-color: #0093E9;
+.contact-form {
     padding: 3rem;
-background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 .craft-themes ul{
 list-style: square;
@@ -780,7 +779,7 @@ blockquote {
     padding-left: calc(1.5rem + 16px);
     position: relative;
 }
-::marker {
+.dot {
     background-image: url(../../../images/design/dot-circle-solid--green.svg);
     content: '';
     display: inline-block;
@@ -893,4 +892,44 @@ transition-property: margin-right, #8ac35c;
     left: 0;
     height: inherit;
     width: inherit;
+}
+.com-content-article .article-body ul li {
+    list-style-type: none;
+    padding: 1rem;
+    background: #fff;
+    margin: 0 0.5rem 0.5rem 0;
+}
+.com-content-article .article-body ul li::before {
+    content: "\f00c";
+    background: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 18px;
+    color: #518325;
+    margin-right: 0.5rem;
+    width: 18px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px;
+}
+.mod-articles-cw .article-aside {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+.contact  {
+    max-width: 60%;
+    margin: 0 auto;
+}
+.contact .plain-style h3, .contact .plain-style .h3 {
+    text-transform: inherit;
+    margin: 0rem;
+    text-align: center;
+}
+#jform_consentbox{display: none;}
+form.form-horizontal .control-group .control-label label {
+    display: none;
+    text-align: left;
+}
+.contact #contact-form .controls {
+    margin-left: auto;
 }

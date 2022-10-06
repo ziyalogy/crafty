@@ -21,86 +21,36 @@
         class="text-label"
       />
 
-			<field
-        name="Country"
-        type="list"
-        label="TPL_NUMBER"
-        description="TPL_NUMBER_DESC"
-        size=""
-        filter="RAW"
-      />
+	<field
+    name="partnerCountry"
+    type="list"
+    label="TPL_COUNTRY"
+    description="FIELDA_DESC"
+    >
+    <option value="Uganda">Uganda</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Tanzania">Tanzania</option>
+</field>
 
-			<field
-        name="crop"
-        type="text"
-        label="TPL_POSITION"
-        description="TPL_POSITION_DESC"
-        size="40"
-        filter="RAW"
-      />
+<field
+    name="partnerStatus"
+    type="list"
+    label="TPL_STATUS"
+    description="FIELDA_DESC"
+    >
+    <option value="active">Active</option>
+    <option value="inactive">Inactive</option>
+</field>
 
-			<field
-        name="team_date"
-        type="text"
-        label="TPL_BIRTHDAY"
-        description="TPL_BIRTHDAY_DESC"
-        size="40"
-        filter="RAW"
-      />
 
-			<field
-        name="team_nationality"
-        type="text"
-        label="TPL_NATIONALITY"
-        description="TPL_NATIONALITY_DESC"
-        size="40"
-        filter="RAW"
-      />
 
-			<field
-        name="team_height"
-        type="text"
-        label="TPL_HEIGHT"
-        description="TPL_HEIGHT_DESC"
-        size="40"
-        filter="RAW"
-      />
+	
 
-			<field
-        name="team_weight"
-        type="text"
-        label="TPL_WEIGHT"
-        description="TPL_WEIGHT_DESC"
-        size="40"
-        filter="RAW"
-      />
 
-			<field
-        name="team_shot"
-        type="text"
-        label="TPL_SHOT"
-        description="TPL_SHOT_DESC"
-        size="40"
-        filter="RAW"
-      />
 
-			<field
-        name="team_played"
-        type="text"
-        label="TPL_PLAYED"
-        description="TPL_PLAYED_DESC"
-        size="40"
-        filter="RAW"
-      />
+
 			
-			<field
-        name="team_goal"
-        type="text"
-        label="TPL_GOAL"
-        description="TPL_GOAL_DESC"
-        size="40"
-        filter="RAW"
-      />
+
 		</fieldset>
 	</fields>
 </form>

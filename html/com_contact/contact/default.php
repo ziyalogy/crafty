@@ -351,16 +351,16 @@ $tparams = $this->item->params;
 	<?php if ($presentation_style === 'plain') : ?>
 	<div class="plain-style">
 		<div class="row">
-			<div class="col-12 col-lg-6 ct-left">
+			<div class="col-12 col-lg-12">
 				<!-- // Show email -->
 				<?php if ($tparams->get('show_email_form') && ($this->item->email_to || $this->item->user_id)) : ?>
-					<?php echo '<h3>' . Text::_('TPL_FORM_CONTACT') . '</h3>'; ?>
+					<?php echo '<h3>' . Text::_('Send us your message') . '</h3>'; ?>
 					<?php echo $this->loadTemplate('form'); ?>
 				<?php endif; ?>
 				<!-- // Show email -->
 			</div>
 
-			<div class="col-12 col-lg-6 ct-right">
+			<div class="col-12 col-lg-12 ct-right">
 				<?php if ($this->params->get('show_info', 1)) : ?>
 					<?php echo '<h3>' . Text::_('TPL_CONTACT_US') . '</h3>'; ?>
 

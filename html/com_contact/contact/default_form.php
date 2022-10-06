@@ -27,7 +27,7 @@ if (isset($this->error)) : ?>
 	</div>
 <?php endif; ?>
 
-<div class="contact-form">
+<div class="contact-form ">
 	<form id="contact-form" action="<?php echo Route::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
 		<fieldset>
 			<legend><?php echo Text::_('COM_CONTACT_FORM_LABEL'); ?></legend>
@@ -43,6 +43,34 @@ if (isset($this->error)) : ?>
 				
 			</div>
 			
+						<!--extra fields-->			
+			<div class="form-group contact-mes row mb-4">
+			<div class="col-sm-12">
+			<?php //Dynamically load any additional fields from plugins. ?>
+			<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
+				<?php if ($fieldset->name != 'contact'):?>
+					<?php if ($fieldset->name === 'captcha' && !$this->captchaEnabled) : ?>
+						<?php continue; ?>
+					<?php endif; ?>
+					
+					<?php $fields = $this->form->getFieldset($fieldset->name); ?>
+					<?php if (count($fields)) : ?>
+						<div class="col-sm-12 contact-name">
+						<fieldset class="<?php echo $fieldset->name ;?> dynamic-fields">
+
+							<?php foreach ($fields as $field) : ?>
+								<?php echo $field->renderField(); ?>
+							<?php endforeach; ?>
+						</fieldset>
+						</div>
+					<?php endif; ?>
+
+				<?php endif ?>
+			<?php endforeach;?>
+			</div>
+			</div>
+			<!--extra fields-->
+
 			<div class="form-group row mb-3">
 				<div class="col-sm-12">
 					<?php echo preg_replace($regex, $label, $this->form->getLabel('contact_subject'), 1); ?>
@@ -56,25 +84,7 @@ if (isset($this->error)) : ?>
 				</div>
 			</div>
 
-			<?php //Dynamically load any additional fields from plugins. ?>
-			<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
-				<?php if ($fieldset->name != 'contact'):?>
-					<?php if ($fieldset->name === 'captcha' && !$this->captchaEnabled) : ?>
-						<?php continue; ?>
-					<?php endif; ?>
-					<?php $fields = $this->form->getFieldset($fieldset->name); ?>
-					<?php if (count($fields)) : ?>
-						<fieldset class="<?php echo $fieldset->name ;?> dynamic-fields">
-							<?php if (isset($fieldset->label) && ($legend = trim(Text::_($fieldset->label))) !== '') : ?>
-								<legend><?php echo $legend; ?></legend>
-							<?php endif; ?>
-							<?php foreach ($fields as $field) : ?>
-								<?php echo $field->renderField(); ?>
-							<?php endforeach; ?>
-						</fieldset>
-					<?php endif; ?>
-				<?php endif ?>
-			<?php endforeach;?>
+
 
 			<div class="form-group row mb-3">
 				<?php if ($this->params->get('show_email_copy')) { ?>
@@ -87,7 +97,7 @@ if (isset($this->error)) : ?>
 				<?php } ?>
 
 				<div class="col-sm-12 control-btn">
-					<button class="btn btn-primary validate" type="submit">
+					<button width="100%" class="btn btn-primary validate" type="submit">
 						<?php echo Text::_('TPL_CONTACT_CONTACT_SEND'); ?>
 					</button>
 				</div>
