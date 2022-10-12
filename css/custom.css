@@ -954,3 +954,6 @@ form.form-horizontal .control-group .control-label label {
 }
 .t4-footnav .copyright-wrap .acm-social .social-inner a {
     background: rgba(255, 255, 255, 0.09);}
+
+#t4-footnav .fa {
+    margin-right: 0.5rem;}

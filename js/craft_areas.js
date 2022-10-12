@@ -1,4 +1,4 @@
-var simplemaps_worldmap_mapdata = {
+var simplemapsworldmap_mapdata = {
   main_settings: {
     //General settings
     width: 'responsive', //'700' or 'responsive'
@@ -58,16 +58,15 @@ var simplemaps_worldmap_mapdata = {
     popup_font: '12px/1.5 Verdana, Arial, Helvetica, sans-serif',
     popup_nocss: 'no',
 
-    //Advanced settings
-    div: 'craft-areas',
-    auto_load: 'yes',
-    url_new_tab: 'no',
-    images_directory: 'default',
+		//Advanced settings
+		div: "craft-areas",
+    auto_load: "yes",
+    rotate: "0",
+    url_new_tab: "no",
+    images_directory: "default",
+    import_labels: "no",
     fade_time: 0.1,
-    link_text: 'Profile',
-    state_image_url: '',
-    state_image_position: '',
-    location_image_url: '',
+    link_text: "See more"
   },
   state_specific: {
     KE: {
