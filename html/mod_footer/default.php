@@ -11,5 +11,5 @@
 defined('_JEXEC') or die;
 ?>
 <div class="module">
-	<small><?php echo $lineone; ?></small>
+	<small>2022. All rights reserved.</small>
 </div>
