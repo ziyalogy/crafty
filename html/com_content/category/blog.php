@@ -42,6 +42,7 @@ $this->pageclass_sfx = $this->pageclass_sfx != '' ? " ".trim($this->pageclass_sf
 // init columns value if not set
 if (empty($this->columns)) $this->columns = 1;
 ?>
+
 <div class="com-content-category-blog blog<?php echo $this->pageclass_sfx;?>" itemscope itemtype="https://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
