@@ -128,7 +128,7 @@ $moduleclass_sfx = htmlspecialchars(
                                                                  $partner_country
                                                              ): ?>
 					            <span class="t-position">
-					              <i class="fa fa-globe"></i><?php echo $partner_country; ?>
+					              <?php echo $article->jcfields['7']->value; ?><?php echo $partner_country; ?>
 					            </span>
 					            <?php endif; ?>
 											

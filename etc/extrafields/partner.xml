@@ -42,6 +42,23 @@
     <option value="inactive">Inactive</option>
 </field>
 
+<field
+    name="country_icon"
+    type="media"
+    label="Country Icon"
+    description="FIELDA_DESC"
+    >
+</field>
+
+<field
+    name="crop_icon"
+    type="media"
+    label="Crop Icon"
+    description="FIELDA_DESC"
+    >
+
+</field>
+
 
 
 	

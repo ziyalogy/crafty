@@ -9,6 +9,7 @@
 
 defined('_JEXEC') or die;
 use Joomla\CMS\Language\Text;
+// Custom field
 
 	$count = count($list);
 	$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
@@ -27,8 +28,10 @@ use Joomla\CMS\Language\Text;
 						// Get Extrafields
 						$extrafields = new JRegistry($item->attribs);
 						$partner_country = $extrafields->get('partnerCountry');
-
+						$partner_country_icon = $extrafields->get('partnerCountryIcon');
+						$partner_crop_icon = $extrafields->get('partnerCropIcon');
 					?>
+						
 						<div class="col">
 							<div class="item-inner">
 								<?php echo JLayoutHelper::render('joomla.content.intro_image', $item); ?>
@@ -97,13 +100,17 @@ use Joomla\CMS\Language\Text;
 									<div class="article-aside">
 										<div class="article-info">
 											<?php if ($item->displayCategoryTitle) : ?>
+												<span><img src="<?php echo $partner_crop_icon ;?>">
 												<span class="category">
 													<?php echo $item->displayCategoryTitle; ?>
 												</span>
 											<?php endif; ?>
-                                            					            <?php if($partner_country) :?>
+                                
+								<?php if($partner_country) :?>
+								<span><img src="<?php echo $partner_country_icon ;?>"></span>
+								<img src="<?php echo $item->jcfields[10]->value; ?>" alt="" class="img-fluid">
 					            <span class="t-position">
-					              <i class="fa fa-globe"></i><?php echo $partner_country ;?>
+					              <?php echo $partner_country ;?>
 					            </span>
 					            <?php endif; ?>
 											
